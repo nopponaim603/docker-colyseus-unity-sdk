@@ -8,5 +8,6 @@ services:
 
         volumes:
             - ./Server/src:/usr/src/app/src
+            - ./Assets/Scripts/Schema:/usr/src/app/client
         ports:
-            - 8080:8080
+            - 2567:2567
