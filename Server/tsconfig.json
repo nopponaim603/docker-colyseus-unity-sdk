@@ -1,24 +1,19 @@
 {
-  "compilerOptions": {
-    "outDir": "build",
-    "target": "es6",
-    "module": "commonjs",
-    "strict": true,
-    "allowJs": true,
-    "strictNullChecks": false,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": false
-  },
-    // other settings...
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
-  },
-
-  "include": [
-    "src"
-  ]
+    "compilerOptions": {
+        "outDir": "build",
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "strict": true,
+        "allowJs": true,
+        "strictNullChecks": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": false
+    },
+    "include": [
+        "src"
+    ]
 }
