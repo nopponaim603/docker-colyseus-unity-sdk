@@ -8,8 +8,26 @@ export type Position = {
 
 export class MyRoom extends Room<MyRoomState> {
 
+  maxClients = 4;
+
   onCreate (options: any) {
     this.setState(new MyRoomState());
+
+    this.onMessage("simple-chat", (client, message) => {
+      //
+      // handle "type" message
+      //
+      console.log("Message from " + client.sessionId + " have message -> " + message);
+      
+      // setting state
+      this.state.mySynchronizedProperty = message;
+
+      // broadcast information per request
+      this.broadcast("simple-chat-from-server", {
+        sessionID: client.sessionId,
+        message: message,
+      });
+    });
   }
 
   onJoin (client: Client, options: any) {

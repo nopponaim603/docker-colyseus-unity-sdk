@@ -10,4 +10,6 @@ export class Player extends Schema {
 export class MyRoomState extends Schema {
 	@type({map: Player})
 	players: MapSchema<Player> = new MapSchema<Player>();
+
+  @type("string") mySynchronizedProperty: string = "Hello world";
 }
